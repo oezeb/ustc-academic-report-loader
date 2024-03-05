@@ -18,7 +18,7 @@
         document.body.appendChild(iframe);
 
         iframe.onload = async function () {
-            let data = await getData();
+            let data = await getData(100);
             let today = new Date();
             data = data.datas.wxbgbgdz.rows.filter(
                 (item) => new Date(item.BGSJ) > today
@@ -133,11 +133,9 @@
         return iframe;
     };
 
-    async function getData() {
+    async function getData(n = 20) {
         let url =
             "https://yjs1.ustc.edu.cn/gsapp/sys/xsbgglappustc/modules/xsbgxk/wxbgbgdz.do";
-        let querySetting =
-            '[{"name":"YXDM","caption":"院系","linkOpt":"AND","builderList":"cbl_m_List","builder":"m_value_equal","value":"011,210","value_display":"计算机科学与技术学院,信息科学技术学院"},{"name":"*order","value":"-BGSJ","linkOpt":"AND","builder":"equal"},{"name":"_gotoFirstPage","value":true,"linkOpt":"AND","builder":"equal"}]';
 
         let res = await fetch(url, {
             headers: {
@@ -158,7 +156,7 @@
                     "https://yjs1.ustc.edu.cn/gsapp/sys/xsbgglappustc/*default/index.do?v=c85d55a2-7d7a-4375-9450-39d14585e32d&THEME=blue&EMAP_LANG=zh&min=1&_yhz=5257ccc1e6bf40f388a6b8169c80b56d",
                 "Referrer-Policy": "strict-origin-when-cross-origin",
             },
-            body: `*order=-BGSJ&querySetting=${querySetting}&pageSize=20&pageNumber=1`,
+            body: `*order=-BGSJ&pageSize=${n}&pageNumber=1`,
             method: "POST",
         });
 
