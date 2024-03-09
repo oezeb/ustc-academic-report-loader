@@ -127,7 +127,7 @@
     const createIframe = () => {
         let iframe = document.createElement("iframe");
         iframe.id = "xsbgxk_iframe";
-        iframe.frameborder = "0";
+        iframe.style.display = "none";
         iframe.src =
             "/gsapp/sys/xsbgglappustc/*default/index.do?v=b072d6cc-e96a-44a3-8395-917e43a3208a&amp;THEME=blue&amp;EMAP_LANG=zh&amp;min=1&amp;_yhz=5257ccc1e6bf40f388a6b8169c80b56d#/xsbgxk";
         return iframe;
