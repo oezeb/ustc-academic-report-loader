@@ -50,7 +50,7 @@
             DD: { name: "Location", size: "100px" },
             BGSJ: { name: "Time", size: "130px" },
             JZSJ: { name: "Deadline", size: "130px" },
-            "YXRS/KXRS": { name: "Capacity/Selected", size: "80px" },
+            "YXRS/KXRS": { name: "Selected/Total", size: "80px" },
             BZ: { name: "Note", size: "100px" },
         };
 
