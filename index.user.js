@@ -2,7 +2,7 @@
 // @name         USTC Academic Report Loader
 // @namespace    https://github.com/oezeb/ustc-academic-report-loader/
 // @version      1.0.0
-// @description  Load reports ustc academinc report list from yjs system with defined filters
+// @description  Load ustc academinc report list from yjs system
 // @author       oezeb
 // @match        *://yjs1.ustc.edu.cn/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=tampermonkey.net
