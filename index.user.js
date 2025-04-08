@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         USTC Academic Report Loader
 // @namespace    https://github.com/oezeb/ustc-academic-report-loader/
-// @version      1.0.0
+// @version      1.0.2
 // @description  Load ustc academinc report list from yjs system
 // @author       oezeb
 // @match        *://yjs1.ustc.edu.cn/*
