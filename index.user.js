@@ -12,6 +12,11 @@
     "use strict";
 
     const isLoggedIn = () => document.querySelector(".user-profile");
+    const excludedDept = new Set([
+        "合肥物质研究院",
+        "长春应用化学研究所",
+        "广州能源研究所",
+    ]);
 
     async function main() {
         let iframe = createIframe();
@@ -21,7 +26,7 @@
             let data = await getData(100);
             let today = new Date();
             data = data.datas.wxbgbgdz.rows.filter(
-                (item) => new Date(item.BGSJ) > today
+                (item) => new Date(item.BGSJ) > today && !excludedDept.has(item.YXDM_DISPLAY)
             );
             data.sort((a, b) => new Date(b.BGSJ) - new Date(a.BGSJ));
             let table = createTable(data);
